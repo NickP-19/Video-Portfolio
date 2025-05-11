@@ -1,0 +1,120 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #111;
+  --text-color: #f0f0f0;
+  --accent-color: #00ffd5;
+  --section-padding: 4rem 2rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header.hero .overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+section h2 {
+  text-align: center;
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.reel video {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+}
+
+.portfolio .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.portfolio .item {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.about p,
+.contact p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #0d0d0d;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  header.hero h1 {
+    font-size: 2rem;
+  }
+  header.hero p {
+    font-size: 1rem;
+  }
+}
